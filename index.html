@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/3c519dae1c.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init('NM-mhhbDnCtUcI15L');
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" id="about">
+        <div class="about">
+            <h1>Daniel Pierre</h1>
+            <p>FullStack Developer</p>
+
+            <div class="about-info">
+                <div class="about-img">
+                    <img src="img/me.jpg" alt="Daniel Pierre">
+                </div>
+                <div class="about-text">
+                    <p>Hello! I'm Daniel Pierre, a 26-year-old full-stack web developer based in São Paulo, Brazil. With three years of experience, I specialize in both front-end and back-end development, creating dynamic and user-friendly websites and applications. Proficient in HTML, CSS, JavaScript, React, Node.js, and Python, I am dedicated to writing clean, efficient code and solving complex problems. Passionate about technology, I enjoy staying updated with the latest trends and contributing to the digital landscape. Let's connect and create something amazing together!</p>
+                    <button id="contactButton">Contact Me</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="skills">
+        <div class="skills">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-css3-alt"></i>
+                    <p>CSS</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-js"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-react"></i>
+                    <p>React</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-node-js"></i>
+                    <p>Node.js</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-python"></i>
+                    <p>Python</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="projects">
+        <div class="projects">
+            <h2>Projects</h2>
+            <div class="projects-list">
+                <!-- Project Card -->
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/akaPierre/meus-gastos/main/meus-gastos-henna.vercel.app(2).png" alt="Project 1">
+                    <h3>Expense Tracker</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/akaPierre/meus-gastos" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://meus-gastos-henna.vercel.app/" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <!-- Repeat for more projects -->
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/akaPierre/chess-js/main/chess-js-tau.vercel.app(2).png" alt="Project 2">
+                    <h3>ChessJS</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/akaPierre/chess-js" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://chess-js-tau.vercel.app/" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/akaPierre/olivia/main/screenshot-oliviatoken.png" alt="Project 3">
+                    <h3>Olivia Token</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/akaPierre/olivia" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://solscan.io/token/DfLAX4Cak5A6bDkhnrRJAQtPvQVbfNvY5E2wJ7Q2CSb3" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <div class="contact">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://github.com/akaPierre" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/daniel-pierre-fachini/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/PierreDani_" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://wa.me/5512997939517" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2024 Daniel Pierre DEV. All Rights Reserved.</p>
+    </footer>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
