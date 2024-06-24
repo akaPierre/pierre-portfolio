@@ -2,10 +2,9 @@
 
 ## Website
 
-Link : https://chess-js-tau.vercel.app/
+Link : https://pierre-portfolio-self.vercel.app/
 
-<a href="https://chess-js-tau.vercel.app/"><img src="https://raw.githubusercontent.com/akaPierre/chess-js/main/chess-js-tau.vercel.app.png" alt="Simple Chess Game" /></a>
-<a href="https://chess-js-tau.vercel.app/"><img src="https://raw.githubusercontent.com/akaPierre/chess-js/main/chess-js-tau.vercel.app(2).png" alt="Simple Chess Game" /></a>
+<a href="https://pierre-portfolio-self.vercel.app/"><img src="https://raw.githubusercontent.com/akaPierre/pierre-portfolio/main/img/pierre-portfolio.png" alt="Pierre Portfolio" /></a>
 
 To run locally, use command `git clone https://github.com/akaPierre/pierre-portfolio.git`, then `cd pierre-portfolio`
 
