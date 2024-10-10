@@ -10,15 +10,14 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #0D1B2A;
     color: #E0E1DD;
-    line-height: 1.8; /* Better readability */
-    margin: 0;
-    padding: 0;
+    line-height: 1.8;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+/* Header / Navigation Bar */
 header {
     background: linear-gradient(90deg, #1B263B, #0D1B2A);
     position: sticky;
@@ -41,11 +40,6 @@ header .logo a {
     align-items: center;
 }
 
-header .logo a img {
-    width: 150px;
-    margin-right: 10px;
-}
-
 header nav {
     display: flex;
     align-items: center;
@@ -65,14 +59,14 @@ header nav ul li a {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
-    transition: color 0.3s ease, transform 0.3s ease;
     padding: 10px 15px;
     border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #778da9;
-    background-color: rgba(224, 225, 221, 0.1);
+    color: #FFD700;
+    background-color: rgba(255, 215, 0, 0.1);
     transform: scale(1.05);
 }
 
@@ -95,13 +89,13 @@ header .burger div {
         background-color: #1B263B;
         width: 100%;
         position: absolute;
-        top: 80px; /* Better position for mobile nav */
-        left: 0;
-        display: none;
+        top: 80px;
+        left: -100%;
+        transition: left 0.5s ease;
     }
 
     header nav ul.active {
-        display: flex;
+        left: 0;
     }
 
     header nav ul li {
@@ -127,20 +121,9 @@ header .burger div {
     header nav ul.active {
         display: flex;
     }
-
-    .project-card {
-        margin-bottom: 2rem; /* More space for mobile */
-    }
-
-    .about h1 {
-        font-size: 2.2rem;
-    }
-
-    .about p {
-        font-size: 1rem;
-    }
 }
 
+/* About Section */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -189,10 +172,6 @@ header .burger div {
     text-align: justify;
 }
 
-.about-text {
-    max-width: 600px;
-}
-
 button {
     border: none;
     outline: 0;
@@ -212,10 +191,7 @@ button:hover {
     background-color: #778da9;
 }
 
-a, a:visited {
-    text-decoration: none;
-}
-
+/* Skills Section */
 .skills {
     padding: 50px 0;
     text-align: center;
@@ -233,13 +209,6 @@ a, a:visited {
     gap: 2rem;
 }
 
-.skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.2rem;
-}
-
 .skill i {
     font-size: 3rem;
     margin-bottom: 10px;
@@ -248,10 +217,10 @@ a, a:visited {
 }
 
 .skill i:hover {
-    color: #778da9;
+    color: #FFD700;
 }
 
-/* Projects section styling */
+/* Projects Section */
 .projects {
     text-align: center;
 }
@@ -286,42 +255,88 @@ a, a:visited {
 }
 
 .project-card img:hover {
-    transform: scale(1.05); /* Smoother hover effect */
-}
-
-.project-card h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-}
-
-.project-links {
-    display: flex;
-    justify-content: space-around;
+    transform: scale(1.05);
 }
 
 .project-links a {
     color: #E0E1DD;
+    background-color: #0D1B2A;
     text-decoration: none;
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    background-color: #0D1B2A;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .project-links a:hover {
-    background-color: #778da9;
+    background-color: #FFD700;
     transform: scale(1.05);
 }
 
+/* Contact Section (Improved) */
+.contact {
+    padding: 3rem 1rem;
+    background-color: #0D1B2A;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: #1B263B;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #0D1B2A;
+    color: #E0E1DD;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #FFD700;
+    background-color: #1B263B;
+}
+
+form button {
+    background-color: #FFD700;
+    color: #0D1B2A;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #FFDF00;
+}
+
+/* Footer */
 footer {
     padding: 2rem;
     background-color: #1B263B;
     text-align: center;
-}
-
-footer .social-media {
-    margin: 1rem 0;
 }
 
 footer .social-media a {
@@ -332,80 +347,10 @@ footer .social-media a {
 }
 
 footer .social-media a:hover {
-    color: #778da9; /* Subtle hover effect */
+    color: #FFD700;
 }
 
 footer p {
     color: #E0E1DD;
     font-size: 1rem;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #0D1B2A;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    color: #E0E1DD;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-close:hover, .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-form label {
-    display: block;
-    margin: 0.5rem 0;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background-color: #1B263B;
-    color: #E0E1DD;
-    outline: none;
-}
-
-form textarea {
-    height: 150px;
-    resize: none;
-}
-
-form button {
-    background-color: #E0E1DD;
-    color: #0D1B2A;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: #778da9;
 }
