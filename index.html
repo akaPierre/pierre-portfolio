@@ -40,6 +40,35 @@
             </div>
         </nav>
     </header>
+    
+    <!-- Updated Mobile Responsive Header -->
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+
+            burger.addEventListener('click', () => {
+                // Toggle Nav
+                nav.classList.toggle('nav-active');
+
+                // Animate Links
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+
+                // Burger Animation
+                burger.classList.toggle('toggle');
+            });
+        }
+
+        navSlide();
+    </script>
+
     <div class="container" id="about">
         <div class="about">
             <h1>Daniel Pierre</h1>
@@ -93,7 +122,7 @@
         <div class="projects">
             <h2>Projects</h2>
             <div class="projects-list">
-                <!-- Project Card -->
+                <!-- Project Cards -->
                 <div class="project-card">
                     <img src="https://raw.githubusercontent.com/akaPierre/meus-gastos/main/meus-gastos-henna.vercel.app(2).png" alt="Project 1">
                     <h3>Expense Tracker</h3>
@@ -102,7 +131,7 @@
                         <a href="https://meus-gastos-henna.vercel.app/" target="_blank">View Project</a>
                     </div>
                 </div>
-                <!-- Repeat for more projects -->
+                <!-- More project cards -->
                 <div class="project-card">
                     <img src="https://raw.githubusercontent.com/akaPierre/chess-js/main/chess-js-tau.vercel.app(2).png" alt="Project 2">
                     <h3>ChessJS</h3>
@@ -111,22 +140,7 @@
                         <a href="https://chess-js-tau.vercel.app/" target="_blank">View Project</a>
                     </div>
                 </div>
-                <!-- Add more project cards as needed -->
-                <div class="project-card">
-                    <img src="https://raw.githubusercontent.com/akaPierre/olivia/main/screenshot-oliviatoken.png" alt="Project 3">
-                    <h3>Olivia Token</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/akaPierre/olivia" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://solscan.io/token/DfLAX4Cak5A6bDkhnrRJAQtPvQVbfNvY5E2wJ7Q2CSb3" target="_blank">View Project</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="https://raw.githubusercontent.com/akaPierre/interactive-language-translator/refs/heads/main/screenshot-interactive-language-translator.png" alt="Project 4">
-                    <h3>Interactive Language Translator</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/akaPierre/interactive-language-translator" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
+                <!-- Additional projects... -->
             </div>
         </div>
     </div>
@@ -156,17 +170,18 @@
         <p>&copy; 2024 Daniel Pierre DEV. All Rights Reserved.</p>
     </footer>
 
+    <!-- Modal for Contact -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Contact Me</h2>
-            <form id="contactForm">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
+            <form id="contactFormModal">
+                <label for="nameModal">Name</label>
+                <input type="text" id="nameModal" name="nameModal" required>
+                <label for="emailModal">Email</label>
+                <input type="email" id="emailModal" name="emailModal" required>
+                <label for="messageModal">Message</label>
+                <textarea id="messageModal" name="messageModal" required></textarea>
                 <button type="submit">Send</button>
             </form>
         </div>
